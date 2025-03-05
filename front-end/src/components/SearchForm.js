@@ -18,8 +18,8 @@ const SearchForm = ({ getSkillsByJob, setReturned, index, setStarted }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (!text || !level) {
-      setErrors({ text: !text, level: !level });
+    if (!text || level === null) {
+      setErrors({ text: !text, level: level === null });
       return;
     }
     setReturned(false);
